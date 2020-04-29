@@ -6,23 +6,17 @@ class ProductsController < ApplicationController
     #@cart = cart;
   end
 
-  def get
-  end
-
   def add
     
-    @item = params[:product]
+    #@item = params[:product]
     #binding.pry
     #byebug
     # Load the cart from the session, or create a new empty cart.
-    cart << @item
+    cart << params[:product]
     #byebug
     #@cart = cart;
 
-  end
+    render :index
 
-  def create
-     # Get the item from the path
-    
   end
 end
